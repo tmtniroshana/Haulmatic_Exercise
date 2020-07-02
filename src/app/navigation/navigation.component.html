@@ -1,0 +1,13 @@
+<mat-toolbar *ngIf="loggedIn">
+  <div>
+    <button mat-button  [routerLink]="['/dashboard']">Dashboard</button>
+    <button mat-button  [routerLink]="['/dashboard/directive']">Directives</button>
+  </div>
+  <div>
+    <button mat-button  (click)="logout()">Logout</button>
+  </div>
+</mat-toolbar>
+
+<mat-toolbar *ngIf="!loggedIn">
+  <span>LOGIN</span>
+</mat-toolbar>

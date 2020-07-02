@@ -1,0 +1,25 @@
+<mat-card class="my-card" style="margin:auto; width: 500px; margin-top: 200px;">
+    <mat-card-content>
+      <form class="my-form" [formGroup]="profileForm">
+          <mat-form-field class="full-width">
+              <mat-label>Email</mat-label>
+              <input  matInput  placeholder="Email" type="email" name="email" formControlName="UserName" required>
+              <mat-error *ngIf="profileForm.get('UserName').hasError('required') && profileForm.get('UserName').touched">
+                Email is required.
+              </mat-error>
+              <mat-error *ngIf="profileForm.get('UserName').hasError('pattern') && profileForm.get('UserName').touched">
+                Invalid email address
+              </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Password</mat-label>
+            <input  matInput type="password"  placeholder="Password" name="password" formControlName="Password" required>
+          </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="login()" color="primary">LOGIN</button>
+    </mat-card-actions>
+</mat-card>
+
