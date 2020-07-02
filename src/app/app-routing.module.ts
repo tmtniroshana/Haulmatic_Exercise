@@ -5,8 +5,6 @@ import {LoginComponent} from './login/login.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {DashboardDerectiveComponent} from './dashboard-derective/dashboard-derective.component';
 
-
-
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'login' },
   { path: 'login', component: LoginComponent },
